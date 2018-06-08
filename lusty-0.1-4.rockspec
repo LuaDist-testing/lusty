@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "lusty"
-version = "0.1-3"
+version = "0.1-4"
 -- LuaDist source
 source = {
-  tag = "0.1-3",
+  tag = "0.1-4",
   url = "git://github.com/LuaDist-testing/lusty.git"
 }
 -- Original source
@@ -23,7 +23,7 @@ description = {
 dependencies = {
   "lua >= 5.1",
   "busted >= 1.7-1",
-  "mediator_lua >= 1.1-1",
+  "mediator_lua >= 1.1-2"
 }
 build = {
   type = "builtin",
