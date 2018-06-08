@@ -1,0 +1,5 @@
+return {
+  url = "",
+  headers = {},
+  data = {}
+}
