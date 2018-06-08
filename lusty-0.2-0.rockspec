@@ -1,9 +1,17 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "lusty"
-version = "0.1-0"
+version = "0.2-0"
+-- LuaDist source
 source = {
-  url = "https://github.com/Olivine-Labs/lusty/v0.1.tar.gz",
-  dir = "lusty"
+  tag = "0.2-0",
+  url = "git://github.com/LuaDist-testing/lusty.git"
 }
+-- Original source
+-- source = {
+--   url = "https://github.com/Olivine-Labs/lusty/archive/v0.2.tar.gz",
+--   dir = "lusty-0.2"
+-- }
 description = {
   summary = "Lua web framework.",
   detailed = [[
@@ -14,7 +22,8 @@ description = {
 }
 dependencies = {
   "lua >= 5.1",
-  "busted >= 1.7-1"
+  "busted >= 1.7-1",
+  "mediator_lua >= 1.1-2"
 }
 build = {
   type = "builtin",
