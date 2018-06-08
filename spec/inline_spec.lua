@@ -1,7 +1,5 @@
-package.path = 'src/?.lua;'..package.path
-
 describe('verify that inline handles environments properly', function()
-  local util = require 'util'
+  local util = require 'lusty.util'
 
   after_each(function()
     util.clearCache()
@@ -19,6 +17,17 @@ describe('verify that inline handles environments properly', function()
 
   it('can set an environment with no variables', function()
     local env = {}
-    assert.equal(nil, util.inline('spec.dummy.inlineFunction', env))
+    assert.same({}, {util.inline('spec.dummy.inlineFunction', env)})
+  end)
+
+  it('can set an environment with nil variables', function()
+    local env = {
+      foo = nil,
+      bat = 100,
+      bar = nil,
+      baz = nil,
+      zat = nil
+    }
+    assert.same({nil, 100}, {util.inline('spec.dummy.inlineFunction', env)})
   end)
 end)
