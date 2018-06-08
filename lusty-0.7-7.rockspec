@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "lusty"
-version = "0.7-6"
+version = "0.7-7"
 -- LuaDist source
 source = {
-  tag = "0.7-6",
+  tag = "0.7-7",
   url = "git://github.com/LuaDist-testing/lusty.git"
 }
 -- Original source
