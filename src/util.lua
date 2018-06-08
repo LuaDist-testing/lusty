@@ -9,13 +9,14 @@ local inlineMeta = {
 --load file, memoize, execute loaded function inside environment
 local function inline(name, env)
   local file = loaded[name]
-
   if not file then
     file = loader(name)
     loaded[name] = file
   end
-
-  return setfenv(file, setmetatable(env, inlineMeta))()
+  if type(file) == 'string' then
+    error(file)
+  end
+  return setfenv(file, setmetatable(env, inlineMeta))(name)
 end
 
 return {
